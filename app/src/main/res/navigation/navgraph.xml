@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpFragment">
+
+    <!-- Login Input Fragment -->
+    <fragment
+        android:id="@+id/loginInputFragment"
+        android:name="baller.example.myapplication.Fragments.LoginInputFragment"
+        android:label="loginFragment"
+        tools:layout="@layout/login_input_fragment">
+        <action
+            android:id="@+id/action_loginInputFragment_to_signupfragment"
+            app:destination="@id/signUpFragment"/>
+    </fragment>
+
+    <!-- Sign-Up Fragment -->
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="baller.example.myapplication.Fragments.SignUpFragment"
+        android:label="signup_fragment"
+        tools:layout="@layout/signup_input_fragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_LoginInputFragment"
+            app:destination="@id/loginInputFragment"/>
+    </fragment>
+
+    <!-- Logged In Activity -->
+    <!--  Main Activity -->
+    <!-- User Menu Fragment -->
+</navigation>

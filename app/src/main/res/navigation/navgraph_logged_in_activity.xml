@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph_logged_in_activity"
+    app:startDestination="@id/userMenuFragment">
+
+    <fragment
+        android:id="@+id/userMenuFragment"
+        android:name="baller.example.myapplication.Fragments.UserMenuFragment"
+        android:label="UserMenuFragment" >
+        <action
+            android:id="@+id/action_userMenuFragment_to_signUpFragment2"
+            app:destination="@id/signUpFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment2"
+        android:name="baller.example.myapplication.Fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment2_to_userMenuFragment"
+            app:destination="@id/userMenuFragment" />
+    </fragment>
+
+
+</navigation>
